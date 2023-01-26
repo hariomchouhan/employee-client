@@ -31,7 +31,7 @@ export function EmployeeList() {
                         {
                             employees.map((emp)=>{
                                 return(
-                                    <tr>
+                                    <tr className="text-center">
                                         <td>{emp.name}</td>
                                         <td>+91-{emp.phone}</td>
                                         <td>&#8377;{emp.salary}</td>
@@ -39,7 +39,9 @@ export function EmployeeList() {
                                         <td><Button variant="danger" className="btn-sm" onClick={async()=>{
                                             await deleteEmployee(emp._id);
                                             fetchEmployees();
-                                        }}>Remove</Button></td>
+                                        }}>Remove</Button>
+                                        <Button variant="primary" className="btn-sm mx-5">Edit List</Button>
+                                        </td>
                                     </tr>
                                 )
                             })
